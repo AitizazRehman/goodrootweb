@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Root | Nature's Goodness</title>
+    <style>
+        :root {
+            --green: #244b36;
+            --deep: #163323;
+            --cream: #f7f3e9;
+            --gold: #c99a50;
+            --text: #27352c;
+            --muted: #667568
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--text)
+        }
+
+        header {
+            background: var(--deep);
+            color: #fff;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap
+        }
+
+        header .brand {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: 1px
+        }
+
+        header .brand span {
+            color: #d9b16c
+        }
+
+        nav {
+            display: flex;
+            gap: 24px
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        nav a:hover {
+            color: #e1ba78
+        }
+
+        .cart {
+            border: 1px solid #d9b16c;
+            padding: 9px 15px;
+            border-radius: 24px
+        }
+
+        .hero {
+            min-height: 470px;
+            padding: 70px 7%;
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 40px;
+            background: linear-gradient(115deg, #f7f3e9 55%, #e5e7d7)
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.04;
+            margin: 0 0 20px;
+            color: var(--deep)
+        }
+
+        .hero h1 em {
+            color: #a57a39;
+            font-style: normal
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 550px;
+            color: var(--muted)
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 14px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 12px
+        }
+
+        .hero-art {
+            min-height: 310px;
+            border-radius: 28px;
+            background: radial-gradient(circle at 50% 30%, #f3dba8, #b2c0a0 50%, #55745a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+            box-shadow: 0 20px 40px #244b3620
+        }
+
+        section {
+            padding: 60px 7%
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 35px
+        }
+
+        .section-head h2 {
+            font-size: 32px;
+            color: var(--deep);
+            margin: 0 0 10px
+        }
+
+        .section-head p {
+            color: var(--muted)
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px #142b1b10
+        }
+
+        .product-img {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 88px;
+            background: linear-gradient(145deg, #e5eadb, #f3e5c7)
+        }
+
+        .product-content {
+            padding: 22px
+        }
+
+        .product h3 {
+            margin: 0 0 10px;
+            color: var(--deep);
+            font-size: 22px
+        }
+
+        .product p {
+            color: var(--muted);
+            line-height: 1.5;
+            min-height: 48px
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #9a7135
+        }
+
+        .product button {
+            width: 100%;
+            border: 0;
+            background: var(--green);
+            color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px
+        }
+
+        .product button:hover {
+            background: var(--deep)
+        }
+
+        .about {
+            background: #e8ecdf;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center
+        }
+
+        .about h2 {
+            font-size: 34px;
+            color: var(--deep)
+        }
+
+        .about p {
+            line-height: 1.8;
+            color: var(--muted)
+        }
+
+        .about-visual {
+            border-radius: 24px;
+            background: #d2ddc7;
+            padding: 40px;
+            text-align: center;
+            font-size: 95px
+        }
+
+        footer {
+            background: var(--deep);
+            color: white;
+            text-align: center;
+            padding: 30px 7%
+        }
+
+        footer p {
+            color: #d5dfd5
+        }
+
+        .cart-note {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #fff;
+            padding: 14px 20px;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px #0002;
+            display: none;
+            font-weight: bold
+        }
+
+        @media(max-width:800px) {
+
+            .hero,
+            .about {
+                grid-template-columns: 1fr
+            }
+
+            .products {
+                grid-template-columns: 1fr 1fr
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap
+            }
+
+            .hero-art {
+                min-height: 230px
+            }
+        }
+
+        @media(max-width:560px) {
+            .products {
+                grid-template-columns: 1fr
+            }
+
+            header {
+                justify-content: center;
+                text-align: center
+            }
+
+            nav {
+                justify-content: center
+            }
+
+            .hero {
+                padding-top: 45px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">GOOD <span>ROOT</span></div>
+        <nav><a href="#home">Home</a><a href="#products">Shop</a><a href="#about">Our Story</a><a
+                href="#contact">Contact</a></nav>
+        <div class="cart">🛒 Cart <span id="cartCount">0</span></div>
+    </header>
+    <main>
+        <div class="hero" id="home">
+            <div>
+                <h1>Goodness from<br>the <em>Root.</em></h1>
+                <p>Discover nature's treasures—premium shilajit, pure honey and wholesome dry fruits selected to bring
+                    natural goodness to your everyday life.</p><a class="btn" href="#products">Explore Our Products</a>
+            </div>
+            <div class="hero-art" aria-label="Natural products illustration">🌿🍯</div>
+        </div>
+        <section id="products">
+            <div class="section-head">
+                <h2>Shop Our Collection</h2>
+                <p>Simple, natural goodness for your home.</p>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <div class="product-img">🪨</div>
+                    <div class="product-content">
+                        <h3>Pure Shilajit</h3>
+                        <p>Mountain-sourced shilajit resin, carefully packaged for convenience.</p>
+                        <div class="price">PKR —</div><button onclick="addToCart('Pure Shilajit')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">🍯</div>
+                    <div class="product-content">
+                        <h3>Natural Honey</h3>
+                        <p>Rich, golden honey with a naturally delicious taste.</p>
+                        <div class="price">PKR —</div><button onclick="addToCart('Natural Honey')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-img">🥜</div>
+                    <div class="product-content">
+                        <h3>Premium Dry Fruits</h3>
+                        <p>A nourishing assortment of almonds, walnuts, dates and more.</p>
+                        <div class="price">PKR —</div><button onclick="addToCart('Premium Dry Fruits')">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div>
+                <h2>Rooted in Nature.<br>Made for Everyday.</h2>
+                <p>At Good Root, we believe the best things come from nature. Our collection focuses on quality, care
+                    and the natural flavors you love—from rich honey to nourishing dry fruits and shilajit.</p>
+                <p>We are building a simple, honest shopping experience that makes natural products easy to discover.
+                </p>
+            </div>
+            <div class="about-visual">🌱🍯🌰</div>
+        </section>
+        <section id="contact">
+            <div class="section-head">
+                <h2>Questions or Orders?</h2>
+                <p>Contact us to learn more about our products or place an order.</p><a class="btn"
+                    href="mailto:hello@goodroot.pk">Email Good Root</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="brand">GOOD <span style="color:#d9b16c">ROOT</span></div>
+        <p>Nature's goodness, thoughtfully selected.</p><small>© 2026 Good Root. All rights reserved.</small>
+    </footer>
+    <div class="cart-note" id="cartNote"></div>
+    <script>let cart = 0; function addToCart(product) { cart++; document.getElementById('cartCount').textContent = cart; const note = document.getElementById('cartNote'); note.textContent = product + ' added to cart! (Demo cart)'; note.style.display = 'block'; setTimeout(() => note.style.display = 'none', 2200) }</script>
+</body>
+
+</html>
